@@ -6,23 +6,20 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 //import file komponen dari direktori tertentu
 import ComponentScreen from './Screen/ComponentScreen';
 import ImageScreen from './Screen/ImageScreen';
+import FlatlistScreen from './Screen/FlatlistScreen';
 
 //tempat koding untuk ditampilkan di layar
 export default function App() {
   return (
     <View>
-      <Text style={styles.text}>
-      //styling dengan memanggil objek test
-      </Text>
-      
-      <Text style={{ fontSize: 30 }}>
-      //styling dengan setelan manual
+      <Text>
+        <FlatlistScreen/>
       </Text>
     </View>
   );
 }
 
-//
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
