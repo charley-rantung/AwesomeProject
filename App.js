@@ -12,7 +12,7 @@ export default function App() {
   return (
     <View>
       <Text style={styles.text}>
-      //styling dengan memanggil objek
+      //styling dengan memanggil objek test
       </Text>
       
       <Text style={{ fontSize: 30 }}>
