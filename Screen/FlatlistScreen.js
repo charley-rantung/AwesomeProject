@@ -1,63 +1,34 @@
-import react from 'React';
+import React from 'react';
 import {Text, View, StyleSheet, FlatList, Image } from 'react-native';
 
 const daftarData = [
-    {
-        "userId": 1,
-        "id": 1,
-        "title": "delectus aut autem",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 2,
-        "title": "quis ut nam facilis et officia qui",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 3,
-        "title": "fugiat veniam minus",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 4,
-        "title": "et porro tempora",
-        "completed": true
-      },
-      {
-        "userId": 1,
-        "id": 5,
-        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        "completed": false
-      },
-      {
-        "userId": 1,
-        "id": 6,
-        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-        "completed": false
-      },
-]
+      { lokasi: 'Perum 1 SBY', harga: 50000000},
+      { lokasi: 'Perum 2 SBY', harga: 67000000},
+      { lokasi: 'Perum 3 SBY', harga: 82000000},
+      { lokasi: 'Perum 4 SBY', harga: 89500000},
+      { lokasi: 'Perum Matungkas', harga: 57250000},
+      { lokasi: 'Perum Agape', harga: 142000000},
+      { lokasi: 'Perum Student Hill', harga: 1307500002}
+];
 
 const FlatlistScreen = () => {
     return(
-        <flatList
-        data={daftarData}
-        renderItem={({item}) =>
-            <View>
-                <Text>
-                    {item.userId}
-                </Text>
-                <Text>
-                    {item.title}
-                </Text>
-            </View>
-        }
-        keyExtractor ={item => item.userId}
+        <FlatList
+          data={daftarData}
+          renderItem={({item}) =>
+              <View style = {{marginTop: 150, width: 150, backgroundColor: 'yellow', borderRadius: 150, alignSelf: 'center'}}>
+                  <Text style = {{textAlign: 'center'}}>
+                      {item.lokasi}
+                  </Text>
+                  <Text style = {{textAlign: 'center'}}>
+                      {item.harga}
+                  </Text>
+              </View>
+          }
+          keyExtractor ={item => item.lokasi}
         />
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
 

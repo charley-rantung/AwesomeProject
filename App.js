@@ -11,11 +11,7 @@ import FlatlistScreen from './Screen/FlatlistScreen';
 //tempat koding untuk ditampilkan di layar
 export default function App() {
   return (
-    <View>
-      <Text>
-        <FlatlistScreen/>
-      </Text>
-    </View>
+    <FlatlistScreen/>
   );
 }
 
@@ -31,3 +27,4 @@ const styles = StyleSheet.create({
     fontSize: 90,
   }
 });
+
